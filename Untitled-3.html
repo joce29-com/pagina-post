@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dulce Tentación | Tienda de Postres</title>
+
+    <style>
+        /* ESTILOS GENERALES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8f2;
+            color: #49352c;
+        }
+
+        /* ENCABEZADO */
+        header {
+            background-color: #9c4668;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* MENÚ DE NAVEGACIÓN */
+        nav {
+            background-color: #63334a;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd9a0;
+        }
+
+        /* PRESENTACIÓN */
+        .presentacion {
+            text-align: center;
+            padding: 55px 20px;
+            background-color: #fce4ec;
+        }
+
+        .presentacion h2 {
+            font-size: 32px;
+            color: #9c4668;
+            margin-bottom: 15px;
+        }
+
+        .presentacion p {
+            max-width: 650px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #9c4668;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .boton:hover {
+            background-color: #63334a;
+        }
+
+        /* SECCIONES DE POSTRES */
+        .categoria {
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .categoria h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .descripcion {
+            margin-bottom: 30px;
+        }
+
+        .tarjetas {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        /* TARJETAS INDIVIDUALES */
+        .postre {
+            background-color: white;
+            width: 280px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s;
+        }
+
+        .postre:hover {
+            transform: translateY(-7px);
+        }
+
+        .postre img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .informacion {
+            padding: 20px;
+        }
+
+        .informacion h3 {
+            margin-bottom: 10px;
+            color: #9c4668;
+        }
+
+        .informacion p {
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .precio {
+            font-size: 20px;
+            font-weight: bold;
+            color: #b65d3c;
+        }
+
+        /* COLORES DE CADA CATEGORÍA */
+        #frios {
+            background-color: #e7f5fc;
+        }
+
+        #frios h2 {
+            color: #247ba0;
+        }
+
+        #calidos {
+            background-color: #fff0df;
+        }
+
+        #calidos h2 {
+            color: #b65d3c;
+        }
+
+        #frutales {
+            background-color: #f0f8df;
+        }
+
+        #frutales h2 {
+            color: #56833b;
+        }
+
+        /* BOTÓN DE CONTACTO */
+        .contacto {
+            background-color: #fce4ec;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .contacto h2 {
+            color: #9c4668;
+            margin-bottom: 15px;
+        }
+
+        .contacto p {
+            margin-bottom: 10px;
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            background-color: #63334a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* DISEÑO PARA CELULARES */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .presentacion h2 {
+                font-size: 25px;
+            }
+
+            .categoria h2 {
+                font-size: 25px;
+            }
+
+            .postre {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header id="inicio">
+        <h1>🍰 Dulce Tentación</h1>
+        <p>Un mundo de sabores para endulzar tu día</p>
+    </header>
+
+    <!-- MENÚ -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#frios">Postres fríos</a>
+        <a href="#calidos">Postres cálidos</a>
+        <a href="#frutales">Postres frutales</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- PRESENTACIÓN -->
+    <section class="presentacion">
+        <h2>¡Bienvenidos a nuestro rincón dulce!</h2>
+
+        <p>
+            Descubre una deliciosa variedad de postres preparados
+            para todos los gustos. Desde opciones frescas y cremosas,
+            hasta postres calientitos y sabores naturales de frutas.
+            ¡Encuentra tu favorito!
+        </p>
+
+        <a href="#frios" class="boton">Explorar postres</a>
+    </section>
+
+    <!-- CATEGORÍA 1: POSTRES FRÍOS -->
+    <section class="categoria" id="frios">
+
+        <h2>❄️ Postres fríos</h2>
+
+        <p class="descripcion">
+            Delicias refrescantes, cremosas y perfectas para disfrutar.
+        </p>
+
+        <div class="tarjetas">
+
+            <div class="postre">
+                <img
+                    src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80"
+                    alt="Helado servido en una copa">
+
+                <div class="informacion">
+                    <h3>Helado artesanal</h3>
+                    <p>Helado cremoso con un delicioso sabor a vainilla y chocolate.</p>
+                    <p class="precio">$45 MXN</p>
+                </div>
+            </div>
+
+            <div class="postre">
+                <img
+                    src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80"
+                    alt="Postre cremoso con fresas">
+
+                <div class="informacion">
+                    <h3>Pay de queso</h3>
+                    <p>Suave pay de queso con una base crujiente y textura cremosa.</p>
+                    <p class="precio">$55 MXN</p>
+                </div>
+            </div>
+
+            <div class="postre">
+                <img
+                    src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=600&q=80"
+                    alt="Postre de chocolate en capas">
+
+                <div class="informacion">
+                    <h3>Pastel de chocolate</h3>
+                    <p>Pastel suave con chocolate y una deliciosa cobertura cremosa.</p>
+                    <p class="precio">$60 MXN</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CATEGORÍA 2: POSTRES CÁLIDOS -->
+    <section class="categoria" id="calidos">
+
+        <h2>🔥 Postres cálidos</h2>
+
+        <p class="descripcion">
+            Sabores reconfortantes, recién preparados y llenos de dulzura.
+        </p>
+
+        <div class="tarjetas">
+
+            <div class="postre">
+                <img
+                    src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80"
+                    alt="Brownies de chocolate">
+
+                <div class="informacion">
+                    <h3>Brownie de chocolate</h3>
+                    <p>Bizcocho de chocolate con una textura suave por dentro.</p>
+                    <p class="precio">$40 MXN</p>
+                </div>
+            </div>
+
+            <div class="postre">
+                <img
+                    src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80"
+                    alt="Galletas recién horneadas">
+
+                <div class="informacion">
+                    <h3>Galletas caseras</h3>
+                    <p>Galletas horneadas con chispas de chocolate, crujientes y dulces.</p>
+                    <p class="precio">$25 MXN</p>
+                </div>
+            </div>
+
+            <div class="postre">
+                <img
+                    src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=600&q=80"
+                    alt="Rebanada de pastel">
+
+                <div class="informacion">
+                    <h3>Pastel recién horneado</h3>
+                    <p>Una rebanada de pastel esponjoso, ideal para acompañar tu café.</p>
+                    <p class="precio">$50 MXN</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CATEGORÍA 3: POSTRES FRUTALES -->
+    <section class="categoria" id="frutales">
+
+        <h2>🍓 Postres frutales</h2>
+
+        <p class="descripcion">
+            Colores, frescura y sabores naturales en cada bocado.
+        </p>
+
+        <div class="tarjetas">
+
+            <div class="postre">
+                <img
+                    src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=600&q=80"
+                    alt="Ensalada de frutas frescas">
+
+                <div class="informacion">
+                    <h3>Ensalada de frutas</h3>
+                    <p>Combinación de frutas frescas, dulces y llenas de color.</p>
+                    <p class="precio">$45 MXN</p>
+                </div>
+            </div>
+
+            <div class="postre">
+                <img
+                    src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&fit=crop&w=600&q=80"
+                    alt="Pay dulce con frutas">
+
+                <div class="informacion">
+                    <h3>Pay de frutas</h3>
+                    <p>Base crujiente con crema dulce y una selección de frutas.</p>
+                    <p class="precio">$55 MXN</p>
+                </div>
+            </div>
+
+            <div class="postre">
+                <img
+                    src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=600&q=80"
+                    alt="Postre preparado con ingredientes frescos">
+
+                <div class="informacion">
+                    <h3>Fresas con crema</h3>
+                    <p>Fresas frescas acompañadas de crema dulce y un toque de vainilla.</p>
+                    <p class="precio">$40 MXN</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto">
+
+        <h2>💗 ¡Endulza tu día con nosotros!</h2>
+
+        <p>¿Ya elegiste tu postre favorito?</p>
+
+        <p>Escríbenos para conocer nuestras opciones y realizar tu pedido.</p>
+
+        <p><strong>Correo:</strong> dulcetentacion@ejemplo.com</p>
+
+        <a href="mailto:dulcetentacion@ejemplo.com" class="boton">
+            Enviar un correo
+        </a>
+
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 Dulce Tentación | Todos los derechos reservados.</p>
+        <p>Hecho con amor y un toque de azúcar 🍰</p>
+    </footer>
+
+</body>
+</html>
